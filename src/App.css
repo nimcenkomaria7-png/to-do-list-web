@@ -1,0 +1,164 @@
+/* Импорт красивого шрифта */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Блок с курсами валют и погодой (оставляем как есть) */
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.money {
+  background: linear-gradient(90deg, #5d0cff 0%, #2ea4db 100%);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  font-weight: 600;
+}
+
+.weather-info {
+  background: linear-gradient(90deg, #5d0cff 0%, #2ea4db 100%);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 500;
+}
+
+.weather-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* Заголовок списка */
+.list-header {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  margin: 30px 0 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: 700;
+}
+
+/* Форма добавления */
+form {
+  display: flex;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 14px 16px;
+  font-size: 16px;
+  border: 3px solid #5d0cff;
+  border-radius: 8px;
+  outline: none;
+  background: white;
+  font-family: 'Inter', sans-serif;
+}
+
+/* НОВЫЙ ДИЗАЙН КНОПКИ СОХРАНЕНИЯ */
+button {
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #5d0cff 0%, #2ea4db 100%);
+  color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: 'Inter', sans-serif;
+}
+
+button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(93, 12, 255, 0.4);
+}
+
+/* КНОПКИ ЗАДАЧ — ТАКОЙ ЖЕ СТИЛЬ, КАК У ПОГОДЫ И ВАЛЮТ */
+.item-todo {
+  background: linear-gradient(90deg, #5d0cff 0%, #2ea4db 100%);
+  color: white;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.item-todo:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Текст задачи */
+.item-text {
+  flex: 1;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  transition: all 0.2s;
+}
+
+.item-text:hover {
+  transform: scale(1.01);
+}
+
+/* Зачёркнутый текст */
+.strike {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+/* КНОПКА УДАЛЕНИЯ (красная для контраста, но в стиле) */
+.item-delete {
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  background: rgba(255, 68, 68, 0.8);
+  color: white;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.item-delete:hover {
+  background: #ff4444;
+  transform: scale(1.1) rotate(90deg);
+}
